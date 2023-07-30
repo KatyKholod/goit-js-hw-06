@@ -17,7 +17,13 @@ const gallery = document.querySelector('.gallery');
 
 const galleryMarkup = images.map(({ url, alt }) =>
   `<li>
-  <img src="${url}" alt="${alt}" width = "300" height = "auto" border = "2px solid">
+  <img src="${url}" alt="${alt}" width = "400 px" height = "auto" border = "5px solid">
   </li>`).join(''); 
   
-  gallery.insertAdjacentHTML('beforeend', galleryMarkup);
+gallery.insertAdjacentHTML('beforeend', galleryMarkup);
+
+gallery.style.listStyle = "none";
+gallery.style.display = "flex";
+gallery.style.flexWrap = "wrap";
+gallery.style.flexDirection = "column"; 
+gallery.style.alignItems = "center";
